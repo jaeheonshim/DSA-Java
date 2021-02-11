@@ -70,6 +70,10 @@ public class DynamicArray<T> implements Iterable<T> {
 
     @SuppressWarnings("unchecked")
     private void resize(int cap) {
+        if(cap < 4) {
+            return;
+        }
+
         T[] newArr = (T[]) new Object[cap];
 
         // here, we have the conditions i < newArr.length AND i < arr.length. This is so that the resize method can be used for shrinking as well as growing, in which case the size of the target array will be less than the size of the source.
