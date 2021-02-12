@@ -22,6 +22,10 @@ import java.util.Iterator;
 public class LinkedListStack<T> implements Iterable<T> {
     private Node first;
 
+    public boolean isEmpty() {
+        return first == null;
+    }
+
     public void add(T element) {
         Node n = new Node();
         n.next = first;

@@ -93,6 +93,8 @@ public class LinkedListQueue<T> implements Iterable<T> {
 
         OutUtil.iterablePrint(linkedListQueue);
 
+        linkedListQueue = new LinkedListQueue<>();
+
         System.out.println();
         System.out.println("Repeatedly enqueue and dequeue");
 
