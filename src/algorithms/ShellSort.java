@@ -1,6 +1,5 @@
 package algorithms;
 
-import jdk.nashorn.tools.Shell;
 import util.OutUtil;
 import util.RandUtil;
 
@@ -13,6 +12,9 @@ import util.RandUtil;
  *
  * Another important question to consider in this algorithm is the increment sequence (the sequence of stride lengths to
  * be used in the insertion sorts.) A popular increment sequence is 3x + 1 (1, 4, 13, 40, 121).
+ *
+ * The analysis of shell sort is still open. This means that there could potentially be an increment sequence that makes
+ * shell sort efficient to the point where it outperforms even the best sorting algorithms we have today!
  */
 public class ShellSort {
     public static void sort(Comparable[] a) {
