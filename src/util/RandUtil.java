@@ -9,4 +9,23 @@ public class RandUtil {
 
         return darr;
     }
+
+    public static Integer[] uniqueRandIntArr(int len, int lower, int upper) {
+        if(upper - lower < len) {
+            throw new IllegalArgumentException();
+        }
+
+        Integer[] arr = new Integer[len];
+        for(int i = 0; i < len; i++) {
+            arr[i] = (int) (Math.random() * (upper - lower)) + lower;
+            for(int j = 0; j < i; j++) {
+                if(arr[i].equals(arr[j])) {
+                    i--;
+                    break;
+                }
+            }
+        }
+
+        return arr;
+    }
 }
